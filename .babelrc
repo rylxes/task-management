@@ -1,0 +1,31 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-env": {
+          "modules": "commonjs"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ],
+    "transform-class-properties",
+    "transform-react-jsx",
+    "transform-object-rest-spread",
+    "transform-flow-strip-types",
+    ["import-rename", {"^(.*)\\.jsx$": "$1"}],
+    [
+      "module-resolver",
+      { "root": ["./"] }
+    ]
+  ]
+}
