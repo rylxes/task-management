@@ -10,6 +10,7 @@
     ]
   ],
   "plugins": [
+    "styled-jsx/babel",
     [
       "styled-components",
       {
@@ -18,14 +19,14 @@
         "preprocess": false
       }
     ],
-    "transform-class-properties",
-    "transform-react-jsx",
-    "transform-object-rest-spread",
     "transform-flow-strip-types",
-    ["import-rename", {"^(.*)\\.jsx$": "$1"}],
     [
-      "module-resolver",
-      { "root": ["./"] }
-    ]
+      "module-resolver", {
+      "root": ["."],
+      "alias": {
+        "styles": "./styles"
+      },
+      "cwd": "babelrc"
+    }]
   ]
 }
